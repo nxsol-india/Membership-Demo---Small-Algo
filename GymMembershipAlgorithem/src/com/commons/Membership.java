@@ -14,9 +14,19 @@ public class Membership {
 		System.out.println("47182:22222:35562" + checkMemberShip("47182:22222:35562"));
 		System.out.println("37182:22222:35562" + checkMemberShip("37182:22222:35562"));
 		System.out.println("57182:22222:35562" + checkMemberShip("57182:22222:35562"));
-		
+		System.out.println("");
+		System.out.println("========Wrong output ");
+		System.out.println("");
 		System.out.println("512sa-gg727-99213" + checkMemberShip("512sa-gg727-99213"));
 		System.out.println("512sa:gg727:99213" + checkMemberShip("512sa:gg727:99213"));
+		
+		System.out.println("47182-22222-3556a" + checkMemberShip("47182-22222-3556a"));
+		System.out.println("37182-22222:3556a" + checkMemberShip("37182-22222-3556a"));
+		System.out.println("57182-22222:3556a" + checkMemberShip("57182-22222-3556a"));
+		
+		System.out.println("47182:22222:3556a" + checkMemberShip("47182:22222:3556a"));
+		System.out.println("37182:22222:3556a" + checkMemberShip("37182:22222:3556a"));
+		System.out.println("57182:22222:3556a" + checkMemberShip("57182:22222:3556a"));
 	}
 
 	public static boolean checkMemberShip(String value) {
