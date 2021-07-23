@@ -31,9 +31,12 @@ public class Membership {
 
 	public static boolean checkMemberShip(String value) {
 
+		//check starting digits - 4 or 37 or 5
 		if(!(value.startsWith("4") || value.startsWith("37") || value.startsWith("5"))) {
 			return false;
 		}
+		
+		//check 15 digit regular expression ....
 		String regexDash = "[0-9]{5}-[0-9]{5}-[0-9]{5}";
 		String regexCol = "[0-9]{5}:[0-9]{5}:[0-9]{5}";
 
