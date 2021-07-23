@@ -14,6 +14,11 @@ public class Membership {
 		System.out.println("47182:22222:35562" + checkMemberShip("47182:22222:35562"));
 		System.out.println("37182:22222:35562" + checkMemberShip("37182:22222:35562"));
 		System.out.println("57182:22222:35562" + checkMemberShip("57182:22222:35562"));
+		
+		System.out.println("47182/22222/35562" + checkMemberShip("47182/22222/35562"));
+		System.out.println("37182/22222/35562" + checkMemberShip("37182/22222/35562"));
+		System.out.println("57182/22222/35562" + checkMemberShip("57182/22222/35562"));
+		
 		System.out.println("");
 		System.out.println("========Wrong output ");
 		System.out.println("");
@@ -27,6 +32,10 @@ public class Membership {
 		System.out.println("47182:22222:3556a" + checkMemberShip("47182:22222:3556a"));
 		System.out.println("37182:22222:3556a" + checkMemberShip("37182:22222:3556a"));
 		System.out.println("57182:22222:3556a" + checkMemberShip("57182:22222:3556a"));
+		
+		System.out.println("47182/22222/3556a" + checkMemberShip("47182/22222/3556a"));
+		System.out.println("37182/22222/3556a" + checkMemberShip("37182/22222/3556a"));
+		System.out.println("57182/22222/3556a" + checkMemberShip("57182/22222/3556a"));
 	}
 
 	public static boolean checkMemberShip(String value) {
@@ -39,16 +48,21 @@ public class Membership {
 		//check 15 digit regular expression ....
 		String regexDash = "[0-9]{5}-[0-9]{5}-[0-9]{5}";
 		String regexCol = "[0-9]{5}:[0-9]{5}:[0-9]{5}";
+		String regexSlash = "[0-9]{5}/[0-9]{5}/[0-9]{5}";
 
 		Pattern patternRegexDash = Pattern.compile(regexDash);
 		Pattern patternRegexCol = Pattern.compile(regexCol);
+		Pattern patternRegexSalsh = Pattern.compile(regexSlash);
 		
 		Matcher matcherPatternRegexDash = patternRegexDash.matcher(value);
 		Matcher matcherPatternRegexCol = patternRegexCol.matcher(value);
+		Matcher matcherPatternRegexSalsh = patternRegexSalsh.matcher(value);
 		
 		if(matcherPatternRegexDash.matches()) {
 			return true;
 		}else if(matcherPatternRegexCol.matches()) {
+			return true;
+		}else if(matcherPatternRegexSalsh.matches()) {
 			return true;
 		}
 
